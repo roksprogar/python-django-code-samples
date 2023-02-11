@@ -33,3 +33,15 @@ print(sorted(xs.items(), key=lambda x: x[1]))
 
 # Using operator
 print(sorted(xs.items(), key=operator.itemgetter(1)))
+
+# 5.5. Dictionaries
+
+# Pretty print dictionaries
+
+# The standard string representation for dicts is hard to read:
+my_dict = { 'a': 23, 'b': 42, 'c': 0xc0ffee }
+print(my_dict)
+
+# The json module can do a much better job.
+import json
+print(json.dumps(my_dict, indent=4, sort_keys=True))
